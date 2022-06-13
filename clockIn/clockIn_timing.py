@@ -15,7 +15,7 @@ def main(js: json):
             if msg == "":
                 print(time.strftime("%H:%M") + " " + "打卡失败！！！！")
                 req_model.push_msg(time.strftime("%H:%M") + " " + "打卡失败！！！！", js)
-            elif json.loads(msg)["m"] == "今天已经填报了" or json.loads(msg)["m"] == "操作成功":
+            elif json.loads(msg)["m"] == "今天已经填报了" or json.loads(msg)["m"] == "打卡成功":
                 msg = '{} {} AT {}'.format(js['username'], json.loads(msg)["m"], time.strftime("%H:%M"))
                 print(msg)
                 req_model.push_msg(msg, js)
