@@ -1,9 +1,7 @@
 name: 'bupt-clockIn'
 
 on:
-  push:
-    branches:
-      - main
+  workflow_dispatch:
   schedule:
     - cron: '20 16 * * *'
 
